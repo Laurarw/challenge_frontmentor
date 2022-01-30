@@ -1,0 +1,158 @@
+@import "general";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    //outline: 1px solid red;
+    
+}
+
+body{
+    background-image: url('/images/pattern-background-mobile.svg');
+    background-color: $color_primary_pale_blue;
+    background-repeat: no-repeat;
+    font-size: $font_size;
+    font-family: $font_family;
+  
+   
+}
+
+.container{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+p{
+    color: $color_neutral_desaturated_blue;
+}
+.card{
+    
+    width: 20rem;
+    height: 34rem;
+    border-radius: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    &-img{
+        border-radius: 30px 30px 0 0 ;
+    }
+    &-description{
+        text-align: center;
+        margin: 0 20px 0 20px;
+        padding:  0 19px 0 19px;
+        h1{
+            margin: 20px 20px;
+            font-weight: 700;
+            color: $color_neutral_blue;
+            font-size: 1.5rem;
+        }
+        p{
+            line-height: 1.5em;
+        }
+        
+    }
+
+    .plan{
+        margin: 20px 20px;
+        padding: 20px;
+        height: auto;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: $color_neutral_pale_blue;
+        &-icon{
+            width: 20%;
+           
+        }
+        &-value{
+            label{
+                font-weight:700;
+            }
+            height: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+          
+
+        }
+        a{
+            align-self: center;
+            color: $color_primary_bright_blue;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+        
+    }
+
+    .btn{
+        margin: 10px 20px 0 20px ;
+        padding: 10px;
+        height: auto;
+        border-radius: 10px;
+        //font-size: 1rem;
+        font-weight: 700;
+        &-primary{
+            background-color: $color_primary_bright_blue;
+            color: #fff;
+            border-color: $color_primary_bright_blue;
+            /* offset-x | offset-y | blur-radius | color */
+            box-shadow: 4px 12px 15px 3px #d7dffd;
+        }
+        &-secundary{
+            background-color: transparent;
+            border-color: transparent;
+            color:  $color_neutral_desaturated_blue;
+            font-weight: 900;
+            
+        }
+    }
+   
+    
+}
+
+@media screen and (min-width:400px){
+
+    body{
+        //outline: 1px solid red;
+        background-image: url('/images/pattern-background-desktop.svg');
+    }
+    .card{
+        width: 28rem;
+        height: 45rem;
+        &-description{
+            text-align: center;
+            margin: 0 30px 0 30px;
+            padding:  0 25px 0 25px;
+            
+            
+        
+        }
+        .plan{
+            margin: 30px 30px;
+            padding: 15px;
+             &-icon{
+                width: 15%;
+               margin-right: -89px;
+           
+            }
+            
+            
+        
+        }
+        .btn{
+            margin: 20px 30px 0 30px ;
+            padding: 18px;
+            font-size: 18px;
+        }
+    }
+    
+}

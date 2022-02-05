@@ -15,12 +15,14 @@ body{
     background-repeat: no-repeat;
     font-size: $font_size;
     font-family: $font_family;
+    
+
   
    
 }
 
 .container{
-    width: auto;
+   width: 80%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -34,8 +36,8 @@ p{
 }
 .card{
     
-    width: 20rem;
-    height: 34rem;
+    width: 100%;
+    height: 31rem;
     border-radius: 30px;
     background-color: #fff;
     display: flex;
@@ -47,9 +49,9 @@ p{
     &-description{
         text-align: center;
         margin: 0 20px 0 20px;
-        padding:  0 19px 0 19px;
+   
         h1{
-            margin: 20px 20px;
+            margin: 10px 10px;
             font-weight: 700;
             color: $color_neutral_blue;
             font-size: 1.5rem;
@@ -61,7 +63,7 @@ p{
     }
 
     .plan{
-        margin: 20px 20px;
+        margin: 10px 20px 10px 20px;
         padding: 20px;
         height: auto;
         border-radius: 10px;
@@ -89,6 +91,9 @@ p{
             color: $color_primary_bright_blue;
             font-weight: 700;
             font-size: 0.8rem;
+            &:hover{
+                color:$color_hover;
+            }
         }
         
     }
@@ -100,18 +105,28 @@ p{
         border-radius: 10px;
         //font-size: 1rem;
         font-weight: 700;
+        &:hover{
+            cursor: pointer;
+        }
         &-primary{
             background-color: $color_primary_bright_blue;
             color: #fff;
             border-color: $color_primary_bright_blue;
             /* offset-x | offset-y | blur-radius | color */
             box-shadow: 4px 12px 15px 3px #d7dffd;
+            &:hover{
+                background-color:$color_hover;
+            }
         }
         &-secundary{
             background-color: transparent;
             border-color: transparent;
             color:  $color_neutral_desaturated_blue;
             font-weight: 900;
+            &:hover{
+               
+                color:$color_neutral_blue;
+            }
             
         }
     }
@@ -121,23 +136,27 @@ p{
 
 @media screen and (min-width:400px){
 
+
     body{
         //outline: 1px solid red;
         background-image: url('/images/pattern-background-desktop.svg');
     }
+    .container{
+        width: 50vw;
+    }
     .card{
-        width: 28rem;
-        height: 45rem;
+        width: 23rem;
+        height: 35rem;
         &-description{
             text-align: center;
             margin: 0 30px 0 30px;
-            padding:  0 25px 0 25px;
+           
             
             
         
         }
         .plan{
-            margin: 30px 30px;
+      
             padding: 15px;
              &-icon{
                 width: 15%;
@@ -149,7 +168,7 @@ p{
         
         }
         .btn{
-            margin: 20px 30px 0 30px ;
+            
             padding: 18px;
             font-size: 18px;
         }

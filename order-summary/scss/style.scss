@@ -10,7 +10,7 @@
 }
 
 body{
-    background-image: url('/images/pattern-background-mobile.svg');
+    background-image: url('/order-summary/images/pattern-background-mobile.svg');
     background-color: $color_primary_pale_blue;
     background-repeat: no-repeat;
     font-size: $font_size;
@@ -129,7 +129,7 @@ p{
             }
             
         }
-    }
+    } 
    
     
 }
@@ -139,7 +139,8 @@ p{
 
     body{
         //outline: 1px solid red;
-        background-image: url('/images/pattern-background-desktop.svg');
+        background-image: url('/order-summary/images/pattern-background-desktop.svg');
+        background-repeat: repeat-x;
     }
     .container{
         width: 50vw;
@@ -172,6 +173,7 @@ p{
             padding: 18px;
             font-size: 18px;
         }
+        
     }
     
 }

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #090b1a; }
+
+.contenedor {
+  width: 90%;
+  max-width: 1400px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  font-weight: 500; }
+  .contenedor .card {
+    background-color: #1b1938;
+    width: 18rem;
+    max-width: 375px;
+    height: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 21rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "img      " "card-body"; }
+    .contenedor .card-img {
+      grid-area: img;
+      width: 18rem;
+      position: relative;
+      overflow: hidden; }
+      .contenedor .card-img::before {
+        content: '';
+        opacity: .5;
+        position: absolute;
+        background: #7253a2e0;
+        left: 0%;
+        top: 0%;
+        z-index: 10;
+        width: 100%;
+        height: 98%;
+        border-radius: 10px; }
+      .contenedor .card-img img {
+        width: 100%;
+        border-radius: 10px; }
+      .contenedor .card-img .img-2 {
+        display: none; }
+    .contenedor .card .card-body > div {
+      width: 16rem; }
+    .contenedor .card .card-body {
+      grid-area: card-body;
+      width: 18rem;
+      padding-bottom: 30px;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(5, auto);
+      row-gap: 30px;
+      text-align: center;
+      justify-items: center;
+      align-items: center;
+      grid-template-areas: "title      " "description" "item-1     " "item-2     " "item-3     "; }
+      .contenedor .card .card-body .card-title {
+        grid-area: title; }
+        .contenedor .card .card-body .card-title h1 {
+          font-size: 1.7em;
+          line-height: 1.2em;
+          color: white; }
+        .contenedor .card .card-body .card-title strong {
+          color: #aa5cdb; }
+      .contenedor .card .card-body .card-description {
+        line-height: 1.5em;
+        grid-area: description; }
+      .contenedor .card .card-body .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .contenedor .card .card-body .item strong {
+          font-size: 1.7em;
+          color: white; }
+        .contenedor .card .card-body .item span {
+          margin-top: 10px;
+          text-transform: uppercase;
+          font-size: .8em;
+          font-family: "Lexend Deca", sans-serif; }
+        .contenedor .card .card-body .item-1 {
+          grid-area: item-1; }
+        .contenedor .card .card-body .item-2 {
+          grid-area: item-2; }
+        .contenedor .card .card-body .item-3 {
+          grid-area: item-3; }
+
+@media screen and (min-width: 875px) {
+  .contenedor {
+    flex-direction: row;
+    height: 100vh; }
+    .contenedor .card {
+      width: 68%;
+      height: 22.4rem;
+      max-width: 1400px;
+      grid-template-columns: 33rem auto;
+      grid-template-rows: 30rem;
+      grid-template-areas: "card-body img "; }
+      .contenedor .card-img {
+        width: 27rem;
+        height: 22.4rem;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px; }
+        .contenedor .card-img::before {
+          border-bottom-left-radius: 0px;
+          border-top-left-radius: 0px;
+          height: 22.4rem; }
+        .contenedor .card-img img {
+          border-bottom-left-radius: 0px;
+          border-top-left-radius: 0px; }
+      .contenedor .card .img-1 {
+        display: none; }
+      .contenedor .card .img-2 {
+        display: block; }
+      .contenedor .card .card-body > div {
+        width: 20rem; }
+      .contenedor .card .card-body {
+        padding: 40px 40px 30px 82px;
+        width: 27rem;
+        height: 22.4rem;
+        text-align: left;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 30px;
+        justify-items: start;
+        grid-template-areas: "title   title  title   " "description description description " "item-1  item-2  item-3 ";
+        column-gap: 10px; }
+        .contenedor .card .card-body .card-title h1 {
+          font-size: 2em; }
+        .contenedor .card .card-body .item {
+          width: 20%; } }

@@ -1,0 +1,27 @@
+
+// ### Primary
+
+$bright_orange: hsl(31, 77%, 52%);
+$dark_cyan: hsl(184, 100%, 22%);
+$very_dark_cyan: hsl(179, 100%, 13%);
+
+// ### Neutral
+
+$transparent_white: hsla(0, 0%, 100%, 0.75);//(paragraphs)
+$very_light_gray: hsl(0, 0%, 95%);//(background, headings, buttons)
+
+
+$font_size:15px;
+$font_family_title: 'Big Shoulders Display', cursive;
+$font_family: 'Lexend Deca', sans-serif;
+
+@mixin icon {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 6em;
+    height: 6em;
+    z-index: 2;
+    margin-top: 20px;
+    //top: 5em;
+}

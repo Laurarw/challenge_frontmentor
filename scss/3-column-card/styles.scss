@@ -1,0 +1,99 @@
+@import 'generales';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //outline: 1px red solid;
+}
+body{
+    width: 100vw;
+    font-size: 15px;
+}
+
+.container{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 3;
+
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 60px 40px 55px;
+    font-family: $font_family;
+
+    &-header{
+        
+        .icon-orange::before{
+            background: url('/images/3-column-card/icon-sedans.svg');
+            @include icon;
+        }
+        .icon-cyan::before{
+            background: url('/images/3-column-card/icon-suvs.svg');
+            @include icon;
+        }
+        .icon-cyan-dark::before{
+            background: url('/images/3-column-card/icon-luxury.svg');
+            @include icon;
+        }
+
+        
+        h1{
+            margin: 100px 0 30px 0;
+            text-transform: uppercase;
+            font-size: 2.5em;
+            color: $very_light_gray;
+            font-family: $font_family_title;
+
+        }
+
+        
+    }
+    &-description{
+        margin-bottom: 40px;
+        p{
+            line-height: 160%;
+            //word-spacing: .1em;
+            text-align: left;
+            color: $transparent_white;
+        }
+    }
+
+    &-footer{
+       
+        .btn{
+            background-color: $very_light_gray;
+            border: $very_light_gray;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+        }
+    }
+
+    &-orange{
+        background-color: $bright_orange;
+        .btn{
+            color: $bright_orange;
+        }
+    }
+    &-cyan{
+        background-color: $dark_cyan;
+
+        .btn{
+            color: $dark_cyan;
+        }
+    }
+    &-cyan-dark{
+        background-color: $very_dark_cyan;
+
+        .btn{
+            color: $very_dark_cyan;
+        }
+    }
+}
